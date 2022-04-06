@@ -1,12 +1,14 @@
-package com.diary.girls.pdfreadaer.PDF;
+package com.pdf.reader.digital.PDF;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.net.Uri;
 import android.os.Bundle;
 
-import com.diary.girls.pdfreadaer.R;
+
 import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
+import com.pdf.reader.digital.R;
 
 import java.io.File;
 
@@ -22,15 +24,24 @@ public class PDFVIEW extends AppCompatActivity {
         pdfView = findViewById(R.id.pdfview);
         filePath = getIntent().getStringExtra("path");
 //        filePath="/storage/emulated/0/Download/kotlin-reference.pdf";
-        File file=new File(filePath);
-        Uri path=Uri.fromFile(file);
-        pdfView.fromUri(path).load();
+        File file = new File(filePath);
+        Uri path = Uri.fromFile(file);
+
+
+        pdfView.fromUri(path)
+                .defaultPage(0)
+                .enableAnnotationRendering(true)
+                .scrollHandle(new DefaultScrollHandle(getApplicationContext()))
+                .load();
 
 
     }
 
+    /* add gradle.properties android.enableJetifier=true
+    add library  implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    add jcenter() setting.gradle
 
-    private void pdfviewer(){
+    private void pdfviewer() {
 //        pdfView.fromUri(Uri)
 //        or
 //        pdfView.fromFile(File)
@@ -75,4 +86,7 @@ public class PDFVIEW extends AppCompatActivity {
 //                .nightMode(false) // toggle night mode
 //                .load();
     }
+
+
+     */
 }

@@ -1,4 +1,4 @@
-package com.diary.girls.pdfreadaer.PDF;
+package com.pdf.reader.digital.PDF;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -6,27 +6,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.Settings;
-import android.widget.ListView;
-import android.widget.Toast;
 
-import com.diary.girls.pdfreadaer.R;
+
+
+
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import com.pdf.reader.digital.R;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllPdf extends AppCompatActivity  {
+public class AllPdf extends AppCompatActivity {
     RecyclerView recyclerView;
     PdfAdapter adapter;
     List<File> pdflist;
@@ -113,10 +110,12 @@ public class AllPdf extends AppCompatActivity  {
     }
 
 
-//    @Override
-//    public void OnPDFSelect(File file) {
-//        String path = file.getAbsolutePath();
-//        startActivity(new Intent(ctx, PDFVIEW.class)
-//                .putExtra("path", path));
-//    }
+  /*  @Override
+    public void OnPDFSelect(File file) {
+        String path = file.getAbsolutePath();
+        startActivity(new Intent(ctx, PDFVIEW.class)
+                .putExtra("path", path));
+    }
+    */
+
 }

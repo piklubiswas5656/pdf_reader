@@ -1,4 +1,4 @@
-package com.diary.girls.pdfreadaer.PDF;
+package com.pdf.reader.digital.PDF;
 
 import java.io.File;
 

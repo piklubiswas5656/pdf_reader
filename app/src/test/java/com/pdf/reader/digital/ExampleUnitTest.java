@@ -1,4 +1,4 @@
-package com.diary.girls.pdfreadaer;
+package com.pdf.reader.digital;
 
 import org.junit.Test;
 

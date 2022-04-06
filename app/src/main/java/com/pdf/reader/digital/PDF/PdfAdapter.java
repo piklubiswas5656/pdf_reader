@@ -1,4 +1,4 @@
-package com.diary.girls.pdfreadaer.PDF;
+package com.pdf.reader.digital.PDF;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,10 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.diary.girls.pdfreadaer.R;
+
+import com.pdf.reader.digital.R;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 public class PdfAdapter extends RecyclerView.Adapter<PdfAdapter.PdfHolder> {
